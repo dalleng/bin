@@ -30,6 +30,7 @@ for f in *.flac; do
   ffmpeg -i "$f" \
          -map 0:a \
          -map_metadata 0 \
+         -ar 44100 \
          -c:a alac \
          "$output"
 
